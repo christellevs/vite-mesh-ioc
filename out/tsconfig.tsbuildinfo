@@ -1,0 +1,1 @@
+{"root":["../types.d.ts","../vite.config.ts","../src/main.ts","../src/vite-env.d.ts","../src/managers/helloworldmanager.ts","../src/utils/provide.ts","../src/components/helloworld.vue","../src/components/root.vue"],"version":"5.6.3"}
