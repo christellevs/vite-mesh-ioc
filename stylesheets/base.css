@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+img,
+form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-main);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+
+    color: var(--text-color);
+    fill: var(--text-color);
+    background-color: var(--background-color);
+
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    /*
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    */
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button,
+input,
+textarea {
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--sp4);
+    margin: var(--sp4) 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: var(--font-weight);
+    line-height: var(--sp4);
+    margin: var(--sp4) 0;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--sp2);
+    margin: var(--sp2) 0;
+}
+
+h4 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--sp2);
+    margin: var(--sp) 0;
+}
+
+h5 {
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-2);
+    text-transform: uppercase;
+    margin: var(--sp) 0;
+}
+
+h6 {
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--color-text-1);
+    margin: var(--sp) 0;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}

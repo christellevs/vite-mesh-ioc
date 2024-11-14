@@ -1,25 +1,22 @@
 {
   "compilerOptions": {
-      "target": "es2020",
-      "module": "NodeNext",
-      "moduleResolution": "NodeNext",
-      "rootDir": ".",
-      "outDir": "./out",
-      "strict": true,
-      "jsx": "preserve",
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "sourceMap": true,
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["src/*"]
-      },
-      "types": ["node"], // Ensure Node.js types are included
-      "lib": ["ESNext", "DOM"] // Include DOM for browser-related types
-  
-  },
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "composite": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": false,
+    "noImplicitOverride": true,
+    "allowJs": true,
+    "checkJs": false,
+    "lib": ["ES2020"]
+    },
   "include": [
       "**/*.ts",
       "**/*.js",

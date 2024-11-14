@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M 11,16 C 16,16 16,16 21,16"
+        fill="none"
+        stroke="#2080DF"
+        stroke-width="2"
+        stroke-opacity=".5"/>
+    <path
+        d="M 12,16 L 8,12 4,12 4,20 8,20 z"
+        fill="#2080DF"
+        fill-opacity=".25"
+        stroke="#2080DF"
+        stroke-width="2"
+        stroke-linejoin="round"/>
+    <circle
+        cx="24"
+        cy="16"
+        r="4"
+        fill="#2080DF"
+        fill-opacity=".25"
+        stroke="#2080DF"
+        stroke-width="2" />
+</svg>
