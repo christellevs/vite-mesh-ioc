@@ -4,7 +4,7 @@ Key players:
 
 * [Vue3](https://vuejs.org/)
 	* [Options API](https://vuejs.org/guide/typescript/options-api)
-* [Vite](https://vite.dev/),
+* [Vite](https://vite.dev/)
 * [Mesh IoC](https://www.npmjs.com/package/mesh-ioc)
 
 
@@ -30,7 +30,7 @@ Next steps for this project:
 
 # 2. Simpler project:
 
-In case you're looking for something even simpler, without libraries support, (add future features here), etc. Here's a guide on setting Up Vue 3 with Vite, Mesh IoC and TypeScript:
+In case you're looking for something even simpler, without libraries support, (add future features here), etc. Here's the [git repo](https://github.com/christellevs/vite-mesh-ioc-simple).
 
 ---
 
