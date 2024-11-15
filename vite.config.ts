@@ -1,4 +1,3 @@
-/* eslint-disable import/no-default-export */
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import { defineConfig } from 'vite';
@@ -17,4 +16,3 @@ export default defineConfig({
         },
     },
 });
-/* eslint-enable import/no-default-export */

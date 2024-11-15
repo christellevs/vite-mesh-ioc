@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es2020",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "rootDir": ".",
+    "outDir": "./out",
+    "lib": ["esnext", "dom", "dom.iterable"],
     "strict": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -15,8 +18,10 @@
     "noImplicitOverride": true,
     "allowJs": true,
     "checkJs": false,
-    "lib": ["ES2020"]
-    },
+    "paths": {
+      "@libs/scaffold": ["./libs/scaffold/index.js"],
+    }
+  },
   "include": [
       "**/*.ts",
       "**/*.js",
