@@ -1,6 +1,36 @@
-# Setting Up Vue 3 with Vite, MeshIoc and TypeScript
+# Vue 3 + Vite + Mesh IoC
 
-This document provides a step-by-step guide to set up a Vue 3 application using [Vite](https://vite.dev/), [Mesh IoC](https://www.npmjs.com/package/mesh-ioc) and TypeScript.
+Key players:
+
+* [Vue3](https://vuejs.org/)
+	* [Options API](https://vuejs.org/guide/typescript/options-api)
+* [Vite](https://vite.dev/),
+* [Mesh IoC](https://www.npmjs.com/package/mesh-ioc)
+
+
+This README is split into 2 parts.
+
+# 1. Repo
+
+The first part is how to run the current repo, which is an evolving experimental project around implementing Vue 3, with Options API, Vite and Mesh IoC.
+
+At the moment it includes a `libs` directory with a `BaseApp` that used Mesh IoC, to provide the option for expanding this library unit, be it with components or more complex frontend related functionality like handling notifications.
+
+To run this repo:
+
+```bash
+npm i && npm run dev
+```
+
+Next steps for this project:
+
+- [ ] Implement Vue Router
+- [ ] Use TypeScript in `.vue` component files
+- [ ] With the above^ attempt to get Intellisense working in `.vue` component files
+
+# 2. Simpler project:
+
+In case you're looking for something even simpler, without libraries support, (add future features here), etc. Here's a guide on setting Up Vue 3 with Vite, Mesh IoC and TypeScript:
 
 ---
 
@@ -26,8 +56,8 @@ This document provides a step-by-step guide to set up a Vue 3 application using 
 Create a new directory for your project and navigate into it:
 
 ```bash
-mkdir frontend-app
-cd frontend-app
+mkdir frontend
+cd frontend
 ```
 
 ---
@@ -53,10 +83,11 @@ Install Vite's Vue plugin:
 npm install --save-dev @vitejs/plugin-vue
 ```
 
-Install `mesh-ioc`:
+Install `mesh-ioc` and `reflect-metadata`:
 
 ```bash
 npm install mesh-ioc
+npm install reflect-metadata
 ```
 
 Install Node.js type definitions:
@@ -65,20 +96,32 @@ Install Node.js type definitions:
 npm install --save-dev @types/node
 ```
 
+Add a `.gitignore` file in the root of your with the following:
+
+```
+node_modules
+```
+
 ---
 
 ## **3. Project Structure**
 
-Your project directory should now look like this:
+Final project directory should look like this:
 
 ```
-frontend-app/
+frontend/
+├── .gitignore
 ├── package.json
+├── tsconfig.json
+├── types.d.ts
+├── vite.config.ts
 ├── node_modules/
 └── src/
-└───── components/
-└───── managers/
-└───── utils/
+    ├── components/
+    ├── managers/
+    ├── utils/
+    ├── index.html
+    └── main.ts
 ```
 ---
 
@@ -123,11 +166,18 @@ Create a `tsconfig.json` file in the root directory with the following content:
 Create a `vite.config.ts` file in the root directory:
 
 ```ts
-import { defineConfig } from 'vite'
+import path from 'path';
 import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
+    root: path.resolve(__dirname, 'src'),
 	plugins: [vue()],
+    build: {
+        rollupOptions: {
+            input: path.resolve(__dirname, 'src/index.html'),
+        },
+    },
 })
 ```
 
@@ -137,7 +187,7 @@ export default defineConfig({
 
 ### **index.html**
 
-Create an `index.html` file in the root directory:
+Create an `index.html` file in the `src` directory:
 
 ```html
 <!DOCTYPE html>
@@ -148,7 +198,7 @@ Create an `index.html` file in the root directory:
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/main.ts"></script>
   </body>
 </html>
 ```
@@ -156,7 +206,9 @@ Create an `index.html` file in the root directory:
 
 Create a `utils` directory in `src`:
 
-This is used to help with MeshIoc
+Inside the `utils` directory create a `provide.ts` file.
+
+This is used to help with Mesh IoC
 
 ``` ts
 import { ServiceConstructor } from 'mesh-ioc';
@@ -303,6 +355,16 @@ Object.assign(globalThis, {
 ---
 
 ## **7. Running the app**
+
+Add vite scripts to `package.json`
+
+```json
+"scripts": {
+  "clean": "rm -rf *.tsbuildinfo out/ dist/",
+  "dev": "vite",
+  "build": "vue-tsc -b && vite build"
+}
+```
 
 In the terminal:
 

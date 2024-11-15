@@ -77,12 +77,7 @@
     --color-overlay: hsla(200deg, 10%, 85%, 25%);
     --color-base-overlay: hsla(200deg, 10%, 96%, 95%);
 
-	--color-primary: hsl(181deg, 100%, 20%, 100%);
-    --color-primary-1: hsl(181, 60%, 35%);
-    --color-primary-2: hsl(181, 44%, 51%);
-    --color-primary-3: hsl(181, 61%, 72%);
-
-
+    --color-primary: hsl(205deg, 85%, 45%);
     --color-primary-text: #fff;
 
     --color-warn: var(--color-highlight-3);

@@ -16,6 +16,7 @@ export default {
     inject: ['helloWorld'],
 
     computed: {
+    
         message() {
             return this.helloWorld.message;
         },
@@ -23,6 +24,7 @@ export default {
         count() {
             return this.helloWorld.count;
         }
+        
     },
 
     methods: {
