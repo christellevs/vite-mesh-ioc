@@ -1,4 +1,5 @@
 export * from './app.js';
+export * from './directives/focus.js';
 export * from './managers/BaseRouter.js';
 export * from './managers/UiManager.js';
 export * from './utils/dom.js';
