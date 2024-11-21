@@ -1,13 +1,20 @@
 <template>
     <h1>{{ message }}</h1>
 
-    <div class="card">
+    <Btn
+        class="Btn"
+        kind="primary"
+        :label="`count is ${count}`"
+        @click="increment()" />
+    
+    <RouterLink
+        to="/about"
+        title="Go to About">
         <Btn
             class="Btn"
             kind="primary"
-            :label="`count is ${count}`"
-            @click="increment()" />
-    </div>
+            label="Go to  About"/>
+    </RouterLink>
 </template>
 
 <script>
@@ -38,6 +45,7 @@ export default {
 
 <style scoped>
 .Btn {
-  color: white
+  color: white;
+  margin: var(--sp2);
 }
 </style>

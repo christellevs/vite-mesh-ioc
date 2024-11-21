@@ -1,7 +1,10 @@
-/* eslint-disable import/no-default-export */
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import { defineConfig } from 'vite';
+import postcssNested from 'postcss-nested';
+import postcssImport from 'postcss-import';
+import autoprefixer from 'autoprefixer';
+
 
 export default defineConfig({
     root: path.resolve(__dirname, 'app'),
@@ -16,5 +19,13 @@ export default defineConfig({
             input: path.resolve(__dirname, 'app/index.html'),
         },
     },
+    css: {
+        postcss: {
+            plugins: [
+                postcssImport(),
+                postcssNested(),
+                autoprefixer(),
+            ],
+        },
+    }
 });
-/* eslint-enable import/no-default-export */

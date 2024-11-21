@@ -6,19 +6,38 @@
   "scripts": {
     "clean": "rm -rf *.tsbuildinfo out/ dist/",
     "dev": "vite",
-    "build": "vue-tsc -b && vite build"
+    "build": "vue-tsc -b && vite build",
+    "lint": "eslint . --cache --max-warnings=0"
   },
   "dependencies": {
+    "@nodescript/core": "^7.21.3",
     "mesh-config": "^1.1.2",
     "mesh-decorators": "^1.0.1",
     "mesh-ioc": "^3.3.1",
-    "vue": "^3.5.12"
+    "nanoevent": "^1.0.0",
+    "undici": "^6.19.8",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@nodescript/eslint-config": "^2.0.2",
     "@types/node": "^22.8.4",
+    "@types/postcss-import": "^14.0.3",
     "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.2.37",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.13.0",
+    "postcss": "^8.4.38",
+    "postcss-import": "^14.1.0",
+    "postcss-loader": "^7.3.4",
+    "postcss-nested": "^5.0.6",
+    "resolve-typescript-plugin": "^1.2.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
     "typescript": "~5.6.2",
     "vite": "^5.4.9",
+    "vue-loader": "^17.4.2",
+    "vue-style-loader": "^4.1.3",
     "vue-tsc": "^2.1.6"
   }
 }

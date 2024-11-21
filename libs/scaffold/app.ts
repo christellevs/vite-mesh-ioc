@@ -3,7 +3,9 @@ import { Mesh } from 'mesh-ioc';
 import { App as VueApp } from 'vue';
 
 import * as components from './components/index.js';
+import { vFocus } from './directives/focus.js';
 import { invokeInitHandlers } from './utils/init.js';
+import { UiManager } from './managers/UiManager.js';
 import { globalProvideMap } from './utils/provide.js';
 
 export class BaseApp {
@@ -25,6 +27,8 @@ export class BaseApp {
         this.mesh.constant('App', this);
         this.mesh.constant('Vue', this.vue);
         vue.provide('app', this);
+        this.mesh.service(UiManager);
+        vue.directive('focus', vFocus);
         for (const [name, comp] of Object.entries(components)) {
             vue.component(name, comp);
         }

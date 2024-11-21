@@ -1,17 +1,16 @@
 <template>
     <div class="Root">
-        <HelloWorld />
+        <RouterView />
     </div>
 </template>
 
 <script>
-import HelloWorld from './HelloWorld.vue';
 
 export default {
 
-    components: {
-        HelloWorld,
-    },
+    inject: [
+        'router',
+    ]
 
 };
 </script>
