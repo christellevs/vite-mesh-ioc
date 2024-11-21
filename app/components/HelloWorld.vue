@@ -8,12 +8,12 @@
         @click="increment()" />
     
     <RouterLink
-        to="/"
+        to="/about"
         title="Go to About">
         <Btn
             class="Btn"
             kind="primary"
-            label="Go Home"/>
+            label="Go to  About"/>
     </RouterLink>
 </template>
 
@@ -46,6 +46,6 @@ export default {
 <style scoped>
 .Btn {
   color: white;
-  padding: var(--sp2);
+  margin: var(--sp2);
 }
 </style>
