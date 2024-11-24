@@ -4,6 +4,7 @@ import { App as VueApp } from 'vue';
 
 import * as components from './components/index.js';
 import { vFocus } from './directives/focus.js';
+import { NotificationsManager } from './managers/NotificationsManager.js';
 import { UiManager } from './managers/UiManager.js';
 import { invokeInitHandlers } from './utils/init.js';
 import { globalProvideMap } from './utils/provide.js';
@@ -28,6 +29,7 @@ export class BaseApp {
         this.mesh.constant('Vue', this.vue);
         vue.provide('app', this);
         this.mesh.service(UiManager);
+        this.mesh.service(NotificationsManager);
         vue.directive('focus', vFocus);
         for (const [name, comp] of Object.entries(components)) {
             vue.component(name, comp);
