@@ -17,7 +17,7 @@
 import { defineComponent } from 'vue';
 import { AboutManager } from '../managers/AboutManager';
 
-export default {
+export default defineComponent({
 
     inject: {
         about: {
@@ -25,7 +25,7 @@ export default {
             default: null as AboutManager | null,
         },
     },
-};
+});
 </script>
 
 <style scoped>
