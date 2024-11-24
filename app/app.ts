@@ -5,6 +5,7 @@ import Root from './components/Root.vue';
 import { AboutManager } from './managers/AboutManager.js';
 import { HelloWorldManager } from './managers/HelloWorldManager.js';
 import { RouterManager } from './managers/RouterManager.js';
+
 export class App extends BaseApp {
 
     constructor() {

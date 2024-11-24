@@ -1,0 +1,21 @@
+{
+    "extends": ["@nodescript/eslint-config"],
+    "rules": {
+        "import/namespace": 0,
+        "import/no-extraneous-dependencies": 0,
+        "require-yield": 0,
+        "vue/no-mutating-props": 0,
+        "vue/no-v-model-argument": 0,
+        "vue/padding-line-between-blocks": [2, "always"],
+        "vue/padding-lines-in-component-definition": [2, {
+            "betweenOptions": "always",
+            "withinOption": "ignore",
+            "groupSingleLineProperties": false
+        }],
+        "vue/html-closing-bracket-newline": [2, {
+            "singleline": "never",
+            "multiline": "never"
+        }],
+        "vue/no-spaces-around-equal-signs-in-attribute": 2
+    }
+}

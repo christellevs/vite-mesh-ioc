@@ -1,9 +1,9 @@
-import { init } from '../utils/init.js';
 import { dep } from 'mesh-ioc';
 import { Event } from 'nanoevent';
 import { App as VueApp } from 'vue';
 import { RouteLocation, RouteLocationRaw, Router } from 'vue-router';
 
+import { init } from '../utils/init.js';
 import { UiManager } from './UiManager.js';
 
 export abstract class BaseRouter {

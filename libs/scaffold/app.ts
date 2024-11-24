@@ -4,8 +4,8 @@ import { App as VueApp } from 'vue';
 
 import * as components from './components/index.js';
 import { vFocus } from './directives/focus.js';
-import { invokeInitHandlers } from './utils/init.js';
 import { UiManager } from './managers/UiManager.js';
+import { invokeInitHandlers } from './utils/init.js';
 import { globalProvideMap } from './utils/provide.js';
 
 export class BaseApp {

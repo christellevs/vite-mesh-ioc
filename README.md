@@ -24,9 +24,9 @@ npm i && npm run dev
 
 Next steps for this project:
 
-- [ ] Implement Vue Router
-- [ ] Use TypeScript in `.vue` component files
-- [ ] With the above^ attempt to get Intellisense working in `.vue` component files
+- [x] Implement Vue Router
+- [x] Use TypeScript in `.vue` component files
+- [x] With the above^ attempt to get Intellisense working in `.vue` component files
 
 ## 2. Simpler project:
 

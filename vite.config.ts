@@ -1,9 +1,10 @@
+/* eslint-disable import/no-default-export */
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
-import { defineConfig } from 'vite';
-import postcssNested from 'postcss-nested';
-import postcssImport from 'postcss-import';
 import autoprefixer from 'autoprefixer';
+import path from 'path';
+import postcssImport from 'postcss-import';
+import postcssNested from 'postcss-nested';
+import { defineConfig } from 'vite';
 
 
 export default defineConfig({
@@ -29,3 +30,4 @@ export default defineConfig({
         },
     }
 });
+/* eslint-enable import/no-default-export */
