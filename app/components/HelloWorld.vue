@@ -6,14 +6,14 @@
         kind="primary"
         :label="`count is ${count}`"
         @click="increment()" />
-    
+
     <RouterLink
         to="/about"
         title="Go to About">
         <Btn
             class="Btn"
             kind="primary"
-            label="Go to  About"/>
+            label="Go to  About" />
     </RouterLink>
 </template>
 
@@ -23,7 +23,7 @@ export default {
     inject: ['helloWorld'],
 
     computed: {
-    
+
         message() {
             return this.helloWorld.message;
         },
@@ -31,7 +31,7 @@ export default {
         count() {
             return this.helloWorld.count;
         }
-        
+
     },
 
     methods: {

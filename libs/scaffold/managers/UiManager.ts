@@ -1,8 +1,8 @@
-import { init } from '../utils/init.js';
-import { pointsEqual } from '../utils/geometry.js';
 import { Event as NanoEvent } from 'nanoevent';
 
 import { isDragAllowed } from '../utils/dom.js';
+import { pointsEqual } from '../utils/geometry.js';
+import { init } from '../utils/init.js';
 import { provide } from '../utils/provide.js';
 
 @provide('ui')
