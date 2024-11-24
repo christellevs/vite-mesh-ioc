@@ -17,30 +17,40 @@
     </RouterLink>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { HelloWorldManager } from '../managers/HelloWorldManager';
 
-    inject: ['helloWorld'],
+export default defineComponent({
 
-    computed: {
-
-        message() {
-            return this.helloWorld.message;
-        },
-
-        count() {
-            return this.helloWorld.count;
-        }
-
+  inject: {
+    helloWorld: {
+      from: 'helloWorld',
+      default: null as HelloWorldManager | null,
     },
-
-    methods: {
-        increment() {
-            return this.helloWorld.incrementCount();
-        }
-    }
-
-};
+  },
+  
+  computed: {
+  
+    message(this: { helloWorld: HelloWorldManager }) {
+      return this.helloWorld.message;
+    },
+    
+    count(this: { helloWorld: HelloWorldManager }) {
+      return this.helloWorld.count;
+    },
+    
+  },
+  
+  methods: {
+  
+    increment(this: { helloWorld: HelloWorldManager }) {
+      this.helloWorld.incrementCount();
+    },
+    
+  },
+  
+});
 </script>
 
 <style scoped>

@@ -13,11 +13,18 @@
     </RouterLink>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { AboutManager } from '../managers/AboutManager';
+
 export default {
 
-    inject: ['about'],
-
+    inject: {
+        about: {
+            from: 'about',
+            default: null as AboutManager | null,
+        },
+    },
 };
 </script>
 

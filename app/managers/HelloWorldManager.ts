@@ -3,8 +3,8 @@ import { provide } from '@libs/scaffold';
 @provide('helloWorld')
 export class HelloWorldManager {
 
-    message = 'Hello, World!';
-    count = 0;
+    message: string = 'Hello, World!';
+    count: number = 0;
 
     incrementCount() {
         this.count += 1;
